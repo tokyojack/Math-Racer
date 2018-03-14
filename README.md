@@ -21,4 +21,4 @@ Then, fill out the question to see if you can beat your opponent!
 
 ##
 
-Now you've just install the program! My head is starting to hurt from racing so many people...  ```( ‾ʖ̫‾)```!
+Now you've just install the program! My head is starting to hurt from racing so many people...  ```( ‾ʖ̫‾)```
