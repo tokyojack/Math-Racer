@@ -1,0 +1,37 @@
+{
+  "name": "math-racer",
+  "version": "1.0.0",
+  "description": "Test your math skills against another person to see who's quicker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "a"
+  },
+  "author": "Jack Clarke",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "colors": "^1.1.2",
+    "cookie-parser": "^1.4.3",
+    "cookies": "^0.7.1",
+    "delayed": "^1.0.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-flash": "0.0.2",
+    "express-session": "^1.15.6",
+    "hashmap": "^2.3.0",
+    "http": "0.0.0",
+    "mathjs": "^3.20.2",
+    "mysql": "^2.15.0",
+    "mysql-pool": "^0.2.2",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "random-number": "0.0.9",
+    "require-sql": "^1.0.0",
+    "socket.io": "^2.0.4"
+  }
+}

@@ -1,0 +1,31 @@
+<% include ../partials/general/header.ejs %>
+
+    <div class="hidden">
+        <gameId><%= id %></gameId>
+        <answer><%= answer %></answer>
+        <username><%= username %></username>
+    </div>
+
+  <div class="valign-wrapper row answer-box">
+    <div class="col card hoverable s10 pull-s1 m6 pull-m3 l4 pull-l4">
+        <div class="card-content">
+          <span class="card-title">Question </span>
+          <div class="row">
+            <br/>
+            <p><%= question  %></p>
+          </div>
+        </div>
+        <div class="card-action right-align">
+          <input placeholder="Answer" id="answer-input" type="text">
+        </div>
+    </div>
+  </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js"></script>
+
+<script type="text/javascript" src="/js/game.js"></script>
+
+
+
+
+  <% include ../partials/general/footer.ejs %>
