@@ -20,8 +20,6 @@ var config = require('./config/config');
 var mysql = require("mysql");
 var pool = mysql.createPool(config.db);
 
-exports.pool = pool;
-
 require('require-sql');
 
 //============================= Passport =============================
@@ -31,11 +29,13 @@ require('./config/passport')(passport, pool);
 
 //============================= Letting express use them =============================
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(express.static(__dirname + "/public"));
 app.use(flash());
 
-app.use(cookieParser()); // read cookies (needed for auth)
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({
     extended: true
 }));
@@ -50,9 +50,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(flash());
-
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
     res.locals.error = req.flash("error");
     res.locals.success = req.flash("success");
 
@@ -68,6 +66,9 @@ app.use(function(req, res, next) {
 var users = [];
 var gameId = 0;
 var matches = new HashMap();
+
+exports.matches = matches;
+
 
 //============================= Routes =============================
 
@@ -102,7 +103,7 @@ app.use("*", miscRoutes);
 
 //============================= Socket io =============================
 
-io.on('connection', function(socket) {
+io.on('connection', function (socket) {
 
     require('./socketEvents/onFindGame')(users, gameId, matches, socket, io);
     require('./socketEvents/onJoin')(socket, io);
@@ -113,8 +114,7 @@ io.on('connection', function(socket) {
 
 //============================= Starting Server =============================
 
-// Make sure it's "http" instead of "app" for Socket.io
-http.listen(8080, function() {
+http.listen(8080, function () {
     console.log("Server running".rainbow);
 });
 

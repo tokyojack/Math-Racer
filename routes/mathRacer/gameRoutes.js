@@ -6,8 +6,7 @@ var middleMan = require("../../utils/middleMan");
 module.exports = function(matches, pool) {
 
     // "game.ejs" page
-    // MIddleman: middleMan.checkIfUserOwnsTodolist,
-    router.get("/:id", function(req, res) {
+    router.get("/:id", middleMan.checkIfUserIsInGame, function(req, res) {
         var id = parseInt(req.params.id);
 
         var match = matches.get(id);

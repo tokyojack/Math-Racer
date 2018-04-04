@@ -1,6 +1,5 @@
 var mathQuestionManager = require('./../questions/mathQuestionManager');
 
-
 module.exports = function(users, gameId, matches, socket, io) {
 
     socket.on('find_game', function(user) {
@@ -29,10 +28,9 @@ module.exports = function(users, gameId, matches, socket, io) {
         };
 
         matches.set(gameId, match);
-
         users.forEach(user => io.sockets.in(user.userId).emit('match_found', { gameId: gameId }));
 
-        // users = []; - Wasn't working, test
+        // users = []; - function?
         users.length = 0;
     });
 
