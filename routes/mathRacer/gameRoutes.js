@@ -11,6 +11,7 @@ module.exports = function(matches, pool) {
 
         var match = matches.get(id);
 
+        // Get's the match info and passes it into the page
         res.render("messenging/game.ejs", {
             id: id,
             username: req.user.username,

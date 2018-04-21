@@ -8,8 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "a"
+    "url": "https://github.com/tokyojack/Math-Racer"
   },
+  "bugs": {
+    "url": "https://github.com/tokyojack/Math-Racer/issues"
+  },
+  "homepage": "https://github.com/tokyojack/Math-Racer#readme",
   "author": "Jack Clarke",
   "license": "ISC",
   "dependencies": {

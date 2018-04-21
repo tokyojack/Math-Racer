@@ -32,15 +32,13 @@ require('./config/passport')(passport, pool);
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(bodyParser.json());
+
 app.use(express.static(__dirname + "/public"));
+
 app.use(flash());
 
 app.use(cookieParser());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(bodyParser.json());
-
 app.use(session({
     secret: 'supersecret',
     resave: true,
@@ -61,14 +59,11 @@ app.use(function (req, res, next) {
 
 //============================= Values =============================
 
-// TODO change to Redis
-
 var users = [];
 var gameId = 0;
 var matches = new HashMap();
 
 exports.matches = matches;
-
 
 //============================= Routes =============================
 

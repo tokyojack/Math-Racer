@@ -1,7 +1,7 @@
 var rn = require('random-number');
 var math = require('mathjs');
 
-// TODO some more advanced questions
+// TODO some more advanced questions maybe?
 
 exports.getRandomMathQuestion = function() {
 
